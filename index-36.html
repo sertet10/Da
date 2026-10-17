@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ответы и разборы заданий по английскому языку Spotlight 9">
+  <title>УчебникОтвет — Spotlight 9</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#121c2e;--panel2:#17243a;--text:#eef4ff;--muted:#a7b5cc;--accent:#7c9cff;--line:#2a3952;--green:#80e0b1}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at top right,#1a2b4b 0,transparent 34%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:1050px;margin:auto;padding:24px 16px 56px}
+    header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+    .logo{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#7996ff,#9a7bff);font-weight:900;color:#07101f;font-size:22px}
+    .brand{font-size:20px;font-weight:800;letter-spacing:.2px}.subbrand{color:var(--muted);font-size:13px}
+    .hero{padding:30px 24px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(135deg,rgba(124,156,255,.15),rgba(23,36,58,.85));}
+    .eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:10px 0 12px}
+    p{margin:8px 0;color:var(--muted)}
+    .searchrow{display:flex;gap:10px;margin-top:22px}
+    input,select,button{font:inherit;border-radius:12px;border:1px solid var(--line);padding:13px 14px}
+    input,select{background:#0c1627;color:var(--text);min-width:0}
+    input{flex:1}
+    button{background:var(--accent);color:#07101f;font-weight:800;border:0;cursor:pointer}
+    .layout{display:grid;grid-template-columns:240px 1fr;gap:18px;margin-top:22px}
+    aside,.content,.card{background:var(--panel);border:1px solid var(--line);border-radius:18px}
+    aside{padding:18px;height:max-content}
+    aside h2,.content h2{font-size:17px;margin:0 0 12px}
+    .navitem{display:block;width:100%;text-align:left;margin:7px 0;background:var(--panel2);color:var(--text);border:1px solid var(--line);font-weight:600}
+    .navitem.active{border-color:var(--accent);background:#203052}
+    .content{padding:20px}
+    .contenthead{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+    .pill{display:inline-block;padding:5px 9px;border-radius:999px;background:#1d3a36;color:var(--green);font-size:12px;font-weight:700}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .card{padding:16px;background:var(--panel2)}
+    .card h3{font-size:16px;margin:0 0 8px}
+    .meta{font-size:12px;color:var(--muted);margin-bottom:10px}
+    .answer{padding:12px;border-radius:12px;background:#0d1728;border:1px solid #263853;white-space:pre-wrap}
+    .answer strong{color:var(--green)}
+    .empty{padding:20px;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+    .notice{margin-top:18px;padding:14px 16px;border-radius:14px;border:1px solid #66512a;background:#2a2418;color:#f3d9a1;font-size:14px}
+    footer{margin-top:26px;color:var(--muted);font-size:12px;text-align:center}
+    @media(max-width:700px){.layout{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.hero{padding:24px 18px}.searchrow{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">У</div>
+      <div><div class="brand">УчебникОтвет</div><div class="subbrand">Учебные задания и разборы</div></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">9 класс · английский язык</div>
+      <h1>Spotlight 9</h1>
+      <p>Учебник авторов Ваулиной и Дули. Найди ответ по модулю, странице или номеру упражнения.</p>
+      <div class="searchrow">
+        <input id="search" type="search" placeholder="Например: Module 1, стр. 12, упр. 3" aria-label="Поиск ответов">
+        <button id="searchBtn">Найти</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside>
+        <h2>Разделы</h2>
+        <button class="navitem active" data-filter="all">Все материалы</button>
+        <button class="navitem" data-filter="grammar">Грамматика</button>
+        <button class="navitem" data-filter="vocabulary">Лексика</button>
+        <button class="navitem" data-filter="reading">Чтение</button>
+        <button class="navitem" data-filter="writing">Письмо</button>
+        <button class="navitem" data-filter="translation">Перевод</button>
+        <p style="font-size:13px;margin-top:16px">Позже здесь можно добавить геометрию и другие предметы.</p>
+      </aside>
+
+      <main class="content">
+        <div class="contenthead">
+          <h2 id="sectionTitle">Материалы по Spotlight 9</h2>
+          <span class="pill" id="count">8 модулей + источник</span>
+        </div>
+        <div class="cards" id="results">
+          <article class="card" data-category="all">
+            <h3>Spotlight 9 — ответы к учебнику</h3>
+            <div class="meta">Ваулина, Дули, Подоляко, Эванс · издание 2023–2026</div>
+            <div class="answer">На странице источника доступны задания по модулям, упражнениям и Grammar Check. Открой источник, выбери модуль, затем раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="grammar">
+            <h3>Module 1 — Celebrations</h3>
+            <div class="meta">Праздники · стартовые ответы и примеры</div>
+            <div class="answer"><strong>Лексика — полезные соответствия</strong>
+spectacular — впечатляющий
+arena — арена, стадион
+explode — взрываться
+trader — торговец
+display — показ, выставка
+handicrafts — изделия ручной работы
+stalls — палатки, торговые лотки
+treats — угощения
+
+<strong>Пример к теме праздников</strong>
+Question: What is your favourite celebration?
+Answer: My favourite celebration is New Year. My family usually decorates a tree, prepares a special meal and exchanges presents.
+
+<strong>Важно</strong>
+Это стартовые материалы по теме модуля, а не полный ключ ко всем упражнениям. Для точных ответов к каждому номеру нужны текст и варианты конкретного задания.</div>
+          </article>
+          <article class="card" data-category="vocabulary">
+            <h3>Module 2 — Life & Living</h3>
+            <div class="meta">Образ жизни</div>
+            <div class="answer">Ответы по разделам 2a–2f, Culture Corner, Going Green и Progress Check доступны на сайте-источнике.</div>
+          </article>
+          <article class="card" data-category="reading">
+            <h3>Module 3 — See It To Believe It</h3>
+            <div class="meta">Необычные явления</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="grammar">
+            <h3>Module 4 — Technology</h3>
+            <div class="meta">Технологии</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="writing">
+            <h3>Module 5 — Art & Literature</h3>
+            <div class="meta">Искусство и литература</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="vocabulary">
+            <h3>Module 6 — Town & Community</h3>
+            <div class="meta">Город и общество</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="reading">
+            <h3>Module 7 — Staying Safe</h3>
+            <div class="meta">Безопасность</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+          <article class="card" data-category="writing">
+            <h3>Module 8 — Challenges</h3>
+            <div class="meta">Преодоление трудностей</div>
+            <div class="answer">Открой страницу источника и выбери нужный раздел и номер упражнения.</div>
+          </article>
+        </div>
+        <div class="empty" id="noResults" hidden>Ничего не найдено. Попробуй изменить запрос или выбрать другой раздел.</div>
+        <div class="notice"><strong>Важно:</strong> В Module 1 добавлены стартовая лексика и пример ответа по теме праздников. Остальные карточки — навигационная основа; точные ответы к отдельным упражнениям можно добавлять постепенно.</div>
+      </main>
+    </div>
+    <footer>УчебникОтвет · неофициальный учебный помощник · Spotlight является названием учебной серии правообладателей</footer>
+  </div>
+  <script>
+    const search = document.getElementById('search');
+    const cards = [...document.querySelectorAll('.card')];
+    const noResults = document.getElementById('noResults');
+    const count = document.getElementById('count');
+    const title = document.getElementById('sectionTitle');
+    let category = 'all';
+
+    function filterCards() {
+      const q = search.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const categoryOk = category === 'all' || card.dataset.category === category;
+        const textOk = card.innerText.toLowerCase().includes(q);
+        card.hidden = !(categoryOk && textOk);
+        if (!card.hidden) visible++;
+      });
+      noResults.hidden = visible !== 0;
+      count.textContent = `${visible} карточек`;
+    }
+    document.querySelectorAll('.navitem').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.navitem').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      category = btn.dataset.filter;
+      title.textContent = btn.textContent === 'Все материалы' ? 'Материалы по Spotlight 9' : btn.textContent;
+      filterCards();
+    }));
+    document.getElementById('searchBtn').addEventListener('click', filterCards);
+    search.addEventListener('input', filterCards);
+  </script>
+</body>
+</html>
